@@ -1,0 +1,15 @@
+get '/' do
+  @menus = Menu.all
+  erb :index
+end
+
+post '/menus' do
+  @menu = Menu.new params
+  if @menu.save
+    redirect '/'
+  else
+    @menus = Menu.all
+    @errors = @menu.errors.full_messages
+    erb :index
+  end
+end
