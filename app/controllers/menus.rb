@@ -13,3 +13,8 @@ post '/menus' do
     erb :index
   end
 end
+
+get '/menus/:id' do
+  @menu = Menu.find params[:id]
+  erb :show
+end
