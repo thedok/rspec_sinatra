@@ -4,8 +4,8 @@ describe Menu do
   context "validations" do
     it { should validate_presence_of :name }
     it { should validate_presence_of :start_at }
-    it "end date must be after end date" do
-      pending
+    it "end date must be after start date" do
+      (menu.start_at).should be < (menu.end_at)
     end
   end
 

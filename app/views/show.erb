@@ -1,2 +1,14 @@
 <h2><%= @menu.name %></h2>
 <p><%= @menu.description %></p>
+
+<p>This menu starts at <%= @menu.start_at.to_s %></p>
+
+<p>This menu ends at <%= @menu.end_at.to_s %></p>
+
+<ul>
+  <% @menu.menu_items.each do |item| %>
+    <li><%= item.name %></li>
+  <% end %>
+</ul>
+
+<%= erb :_form_errors %>

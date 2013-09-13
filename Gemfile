@@ -20,6 +20,7 @@ gem 'shotgun'
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
+  gem 'database_cleaner'
 end
 
 group :test, :development do

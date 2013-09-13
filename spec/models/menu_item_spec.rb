@@ -8,10 +8,10 @@ describe MenuItem do
   end
 
   context "associations" do
-    it { pending }
+    it { should belong_to :menu }
   end
 
   context "#name" do
-    it { pending }
+    it { should respond_to('name') }
   end
 end
